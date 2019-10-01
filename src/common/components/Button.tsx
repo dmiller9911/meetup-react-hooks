@@ -46,13 +46,14 @@ const getBorderColorForVariant = (
 export const Button = styled.button<ButtonProps>`
   display: ${props => (props.fullWidth ? 'block' : 'inline-block')};
   min-height: 50px;
-  border-radius: 100px;
+  border-radius: 3px;
   padding: 1rem 1.5rem;
   border-width: 3px;
   border-style: solid;
   font-size: 1rem;
   font-weight: 500;
   outline: none;
+  cursor: pointer;
   text-align: ${props => props.textAlign};
   width: ${props => (props.fullWidth ? '100%' : 'initial')};
   border-color: ${({ theme, variant }) =>
@@ -60,6 +61,10 @@ export const Button = styled.button<ButtonProps>`
   color: ${({ theme, variant }) => getColorForVariant(variant, theme)};
   background-color: ${({ theme, variant }) =>
     getBackgroundForVariant(variant, theme)};
+  &:hover {
+    background-color: #e9e8e8;
+    border-color: #e9e8e8;
+  }
 `;
 
 Button.defaultProps = {

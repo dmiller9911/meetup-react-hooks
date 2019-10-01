@@ -1,5 +1,5 @@
+import { Button } from '@auth0/cosmos';
 import React from 'react';
-import { Button } from '../../common/components/Button';
 import { Card } from '../../common/components/Card';
 import { Text } from '../../common/components/Text';
 import { styled } from '../../common/styles/styled';
@@ -24,6 +24,10 @@ export const ListItem = styled.li`
   }
 `;
 
+const StartQuizButton = styled(Button)`
+  width: 100%;
+` as any;
+
 export const QuizList: React.SFC<QuizListProps> = ({
   availableQuizes,
   onSelectQuiz,
@@ -33,9 +37,12 @@ export const QuizList: React.SFC<QuizListProps> = ({
       Auth0 Values Triva
     </Text>
     <List>
-      <Button fullWidth onClick={() => onSelectQuiz(availableQuizes[0])}>
+      <StartQuizButton
+        appearance="cta"
+        onClick={() => onSelectQuiz(availableQuizes[0])}
+      >
         Start Quiz
-      </Button>
+      </StartQuizButton>
     </List>
   </Card>
 );

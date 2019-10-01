@@ -78,6 +78,8 @@ export const auth0ValuesQuiz: Quiz = {
       text:
         'Another team is reaching out requesting your insight on a particular problem they are working on, What would be the Auth0 way of assisting?',
       value: auth0Values.oneTeam,
+      description:
+        'Contribute beyond your own area of responsibility when you can.',
     },
     {
       answer: 1,
@@ -90,6 +92,20 @@ export const auth0ValuesQuiz: Quiz = {
       text:
         'An engineer is discussing improving the process for an implementation he is working on and decides to raise this with his coworkers, what is the most effective way to work through this?',
       value: auth0Values.nPlus1,
+      description: 'We question the status quo constructively.',
+    },
+    {
+      answer: 3,
+      answerOptions: [
+        'Reply to the email and wish the sender well and click on every link.',
+        'Immediately pull out your credit card and provide it to the sender, they seem trustworthy.',
+        'Ignore the email, it probably isn’t important anyway.',
+        'Forward the email to phishing@auth0.com',
+      ],
+      text: 'You receive a suspicious email, what do you do?',
+      value: auth0Values.giveAShit,
+      description:
+        'We care intensely about what we do and who we are while maintaining humility and a sense of humor at all times.',
     },
     {
       answer: 3,
@@ -101,11 +117,13 @@ export const auth0ValuesQuiz: Quiz = {
       ],
       text: 'What should be valued higher?',
       value: auth0Values.oneTeam,
+      description:
+        'Team Success outweighing Individual accomplishments, with both being celebrated.',
     },
     {
       answer: 0,
       answerOptions: [
-        'Reach out to your teammates and ask if they are able to assist you. If you’re not making mistakes you are not making progress, N + 1 > N.',
+        'Reach out to your teammates and ask if they are able to assist you.',
         'Move your personal space to the front page of Confluence for everyone to see',
         'Throw your computer out the window, curl up in a ball on the floor and start crying.',
         'Uninstall Confluence from the internet.',
@@ -113,6 +131,8 @@ export const auth0ValuesQuiz: Quiz = {
       text:
         'Its your first day, you are logging into confluence for the first time and you incorrectly setup your personal space, what should your approach be to resolve your issue?',
       value: auth0Values.nPlus1,
+      description:
+        'If we are not making mistakes, we’re not making progress. N+1>',
     },
   ],
 };

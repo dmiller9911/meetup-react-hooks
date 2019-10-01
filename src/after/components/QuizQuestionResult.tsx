@@ -1,5 +1,5 @@
+import { Button } from '@auth0/cosmos';
 import React from 'react';
-import { Button } from '../../common/components/Button';
 import { Card, CardActions } from '../../common/components/Card';
 import { Text } from '../../common/components/Text';
 import { styled } from '../../common/styles/styled';
@@ -33,6 +33,7 @@ const ValueIcon = styled.img`
 
 const ValueTitle = styled.h1`
   text-align: center;
+  font-size: 32px;
 `;
 
 export const QuizQuestionResult: React.SFC<QuizQuestionResultProps> = ({
@@ -61,23 +62,21 @@ export const QuizQuestionResult: React.SFC<QuizQuestionResultProps> = ({
           </Text> */}
         </Text>
       )}
-      {/* {Boolean(currentQuestion.description) && (
+      {Boolean(currentQuestion.description) && (
         <Text color="secondary" align="center" mb={1}>
           {currentQuestion.description}
         </Text>
-      )} */}
+      )}
       <CardActions>
-        <Button onClick={onExit} fullWidth>
-          Exit Quiz
-        </Button>
+        <Button onClick={onExit}>Exit Quiz</Button>
         {isCorrect ? (
           hasNexQuestion && (
-            <Button fullWidth onClick={onNextQuestion} variant="primary">
+            <Button onClick={onNextQuestion} appearance="cta">
               Next Question
             </Button>
           )
         ) : (
-          <Button fullWidth onClick={onTryAgain} variant="primary">
+          <Button onClick={onTryAgain} appearance="cta">
             Try Again
           </Button>
         )}
