@@ -16,6 +16,7 @@ const QuestionText = styled.div`
   font-size: 1.5rem;
   text-align: center;
   margin-bottom: 2rem;
+  line-height: 1.2;
 `;
 
 const TimerWrapper = styled.div`

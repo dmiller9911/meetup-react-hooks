@@ -68,6 +68,9 @@ export const auth0ValuesQuiz: Quiz = {
   title: 'Auth0 Values',
   questions: [
     {
+      // Question 1
+      text:
+        'Another team is requesting your insight on a particular problem they are working on, how would you assist?',
       answer: 2,
       answerOptions: [
         'Laugh at them.',
@@ -75,56 +78,58 @@ export const auth0ValuesQuiz: Quiz = {
         'Contribute beyond your own area of responsibility when you can.',
         'Leave the room, pointing and laughing.',
       ],
-      text:
-        'Another team is reaching out requesting your insight on a particular problem they are working on, What would be the Auth0 way of assisting?',
       value: auth0Values.oneTeam,
       description:
         'Contribute beyond your own area of responsibility when you can.',
     },
     {
+      // Question 3
+      text:
+        'What would be an effective way further developing and improving a process?',
       answer: 1,
       answerOptions: [
-        'Announce to teammates that they will take care of absolutely everything and not to worry.',
-        'Constructively approach questioning the status quo, working collaboratively with teammates to gain insights and document and seek approval for any improvements along the way.',
-        'Yell aggressively about all the issues with the process, shaking a fist in the air and taking care not to ever attempt to think of potential solutions to the problem at hand',
+        'Announce to teammates that you will take care of absolutely everything and not to worry.',
+        'Constructively approach questioning the status quo, working collaboratively with teammates to gain insights and document improvements.',
+        'Talk loudly about the problem you have without once focusing on a solution to the issue',
         'Throw your hands in the air, scream your lungs out and curl up in a ball on the floor crying.',
       ],
-      text:
-        'An engineer is discussing improving the process for an implementation he is working on and decides to raise this with his coworkers, what is the most effective way to work through this?',
       value: auth0Values.nPlus1,
       description: 'We question the status quo constructively.',
     },
     {
+      // Question 5
+      text: 'You receive a suspicious email, what do you do?',
       answer: 3,
       answerOptions: [
         'Reply to the email and wish the sender well and click on every link.',
         'Immediately pull out your credit card and provide it to the sender, they seem trustworthy.',
         'Ignore the email, it probably isn’t important anyway.',
-        'Forward the email to phishing@auth0.com',
+        'Report the email via correct process, we care intensely about what we do, including every email we get.',
       ],
-      text: 'You receive a suspicious email, what do you do?',
       value: auth0Values.giveAShit,
       description:
         'We care intensely about what we do and who we are while maintaining humility and a sense of humor at all times.',
     },
     {
+      // Question 2
       answer: 3,
       answerOptions: [
-        'The team failing miserably at completing a task',
-        'Achieving individual success at the expense of teammates',
-        'Individual accomplishments',
+        'The team failing miserably at completing a task.',
+        'Achieving individual success at the expense of teammates.',
+        'Individual accomplishments.',
         'Team Success outweighing Individual accomplishments, with both being celebrated.',
       ],
-      text: 'What should be valued higher?',
+      text: 'Which of these should be valued higher?',
       value: auth0Values.oneTeam,
       description:
         'Team Success outweighing Individual accomplishments, with both being celebrated.',
     },
     {
+      // Question 4
       answer: 0,
       answerOptions: [
-        'Reach out to your teammates and ask if they are able to assist you.',
-        'Move your personal space to the front page of Confluence for everyone to see',
+        'Reach out to your buddy/manager and ask if they are able to assist you.',
+        'Move your personal space to the front page of Confluence for everyone to see.',
         'Throw your computer out the window, curl up in a ball on the floor and start crying.',
         'Uninstall Confluence from the internet.',
       ],

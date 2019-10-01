@@ -36,6 +36,23 @@ const ValueTitle = styled.h1`
   font-size: 32px;
 `;
 
+const wrongAnswerResponses = [
+  'WRONG!',
+  'Really?',
+  'What were you thinking?!',
+  'NOPE',
+  'Try again please...',
+  'An HR meeting has been schedule for you, that’s really incorrect.',
+  'Ummmmm, that’s incorrect',
+  'Whoa, that might be a bit extreme, also incorrect.',
+  'Not quite…… Seriously, try again',
+];
+
+function getRandomWrongAnswerResponse() {
+  const maxIndex = wrongAnswerResponses.length - 1;
+  return wrongAnswerResponses[Math.floor(Math.random() * (maxIndex - 0 + 1))];
+}
+
 export const QuizQuestionResult: React.SFC<QuizQuestionResultProps> = ({
   currentQuestion,
   selectedAnswerIndex,
@@ -56,10 +73,7 @@ export const QuizQuestionResult: React.SFC<QuizQuestionResultProps> = ({
       <ValueTitle>{currentQuestion.value.label}</ValueTitle>
       {!isCorrect && (
         <Text as="div" align="center" mb={1}>
-          <Text mb={1 / 2}>Seriously?</Text>
-          {/* <Text weight={500} size={1.25}>
-            {correctAnswer}
-          </Text> */}
+          <Text mb={1 / 2}>{getRandomWrongAnswerResponse()}</Text>
         </Text>
       )}
       {Boolean(currentQuestion.description) && (

@@ -43,7 +43,9 @@ const Circle = styled.circle<{ value: number }>`
 `;
 
 export const Timer: React.SFC<TimerProps> = ({ value }) => {
-  const percent = (10 - value) * 10;
+  const timeLeft = 15 - value;
+  const percent = (timeLeft / 15) * 100;
+
   return (
     <Root>
       {value}
